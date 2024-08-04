@@ -1,0 +1,680 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2ABBD6402A807547007B15FE /* PhosteraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABBD63F2A807547007B15FE /* PhosteraApp.swift */; };
+		2ABBD6422A807547007B15FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABBD6412A807547007B15FE /* ContentView.swift */; };
+		2ABBD6442A807547007B15FE /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABBD6432A807547007B15FE /* Item.swift */; };
+		2ABBD6462A80754A007B15FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ABBD6452A80754A007B15FE /* Assets.xcassets */; };
+		2ABBD64A2A80754A007B15FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ABBD6492A80754A007B15FE /* Preview Assets.xcassets */; };
+		2ABBD6542A80754A007B15FE /* PhosteraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABBD6532A80754A007B15FE /* PhosteraTests.swift */; };
+		2ABBD65E2A80754A007B15FE /* PhosteraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABBD65D2A80754A007B15FE /* PhosteraUITests.swift */; };
+		2ABBD6602A80754A007B15FE /* PhosteraUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABBD65F2A80754A007B15FE /* PhosteraUITestsLaunchTests.swift */; };
+		2ABFE1B02A9EAC28008FD3B6 /* HaishinKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2ABFE1AF2A9EAC28008FD3B6 /* HaishinKit */; };
+		2ABFE1B32A9EAC36008FD3B6 /* Puppy in Frameworks */ = {isa = PBXBuildFile; productRef = 2ABFE1B22A9EAC36008FD3B6 /* Puppy */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2ABBD6502A80754A007B15FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2ABBD6342A807547007B15FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2ABBD63B2A807547007B15FE;
+			remoteInfo = Phostera;
+		};
+		2ABBD65A2A80754A007B15FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2ABBD6342A807547007B15FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2ABBD63B2A807547007B15FE;
+			remoteInfo = Phostera;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2A9D42862AAF7F550061FA17 /* PhosteraViewer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "PhosteraViewer-Info.plist"; sourceTree = "<group>"; };
+		2ABBD63C2A807547007B15FE /* PhosteraViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhosteraViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ABBD63F2A807547007B15FE /* PhosteraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhosteraApp.swift; sourceTree = "<group>"; };
+		2ABBD6412A807547007B15FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2ABBD6432A807547007B15FE /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		2ABBD6452A80754A007B15FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2ABBD6472A80754A007B15FE /* Phostera.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Phostera.entitlements; sourceTree = "<group>"; };
+		2ABBD6492A80754A007B15FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2ABBD64F2A80754A007B15FE /* PhosteraViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhosteraViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ABBD6532A80754A007B15FE /* PhosteraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhosteraTests.swift; sourceTree = "<group>"; };
+		2ABBD6592A80754A007B15FE /* PhosteraViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhosteraViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ABBD65D2A80754A007B15FE /* PhosteraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhosteraUITests.swift; sourceTree = "<group>"; };
+		2ABBD65F2A80754A007B15FE /* PhosteraUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhosteraUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2ABBD6392A807547007B15FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ABFE1B02A9EAC28008FD3B6 /* HaishinKit in Frameworks */,
+				2ABFE1B32A9EAC36008FD3B6 /* Puppy in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2ABBD64C2A80754A007B15FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2ABBD6562A80754A007B15FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2ABBD6332A807547007B15FE = {
+			isa = PBXGroup;
+			children = (
+				2A9D42862AAF7F550061FA17 /* PhosteraViewer-Info.plist */,
+				2ABBD63E2A807547007B15FE /* Phostera */,
+				2ABBD6522A80754A007B15FE /* PhosteraTests */,
+				2ABBD65C2A80754A007B15FE /* PhosteraUITests */,
+				2ABBD63D2A807547007B15FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2ABBD63D2A807547007B15FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2ABBD63C2A807547007B15FE /* PhosteraViewer.app */,
+				2ABBD64F2A80754A007B15FE /* PhosteraViewerTests.xctest */,
+				2ABBD6592A80754A007B15FE /* PhosteraViewerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2ABBD63E2A807547007B15FE /* Phostera */ = {
+			isa = PBXGroup;
+			children = (
+				2ABBD63F2A807547007B15FE /* PhosteraApp.swift */,
+				2ABBD6412A807547007B15FE /* ContentView.swift */,
+				2ABBD6432A807547007B15FE /* Item.swift */,
+				2ABBD6452A80754A007B15FE /* Assets.xcassets */,
+				2ABBD6472A80754A007B15FE /* Phostera.entitlements */,
+				2ABBD6482A80754A007B15FE /* Preview Content */,
+			);
+			path = Phostera;
+			sourceTree = "<group>";
+		};
+		2ABBD6482A80754A007B15FE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2ABBD6492A80754A007B15FE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2ABBD6522A80754A007B15FE /* PhosteraTests */ = {
+			isa = PBXGroup;
+			children = (
+				2ABBD6532A80754A007B15FE /* PhosteraTests.swift */,
+			);
+			path = PhosteraTests;
+			sourceTree = "<group>";
+		};
+		2ABBD65C2A80754A007B15FE /* PhosteraUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2ABBD65D2A80754A007B15FE /* PhosteraUITests.swift */,
+				2ABBD65F2A80754A007B15FE /* PhosteraUITestsLaunchTests.swift */,
+			);
+			path = PhosteraUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2ABBD63B2A807547007B15FE /* PhosteraViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2ABBD6632A80754A007B15FE /* Build configuration list for PBXNativeTarget "PhosteraViewer" */;
+			buildPhases = (
+				2ABBD6382A807547007B15FE /* Sources */,
+				2ABBD6392A807547007B15FE /* Frameworks */,
+				2ABBD63A2A807547007B15FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhosteraViewer;
+			packageProductDependencies = (
+				2ABFE1AF2A9EAC28008FD3B6 /* HaishinKit */,
+				2ABFE1B22A9EAC36008FD3B6 /* Puppy */,
+			);
+			productName = Phostera;
+			productReference = 2ABBD63C2A807547007B15FE /* PhosteraViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2ABBD64E2A80754A007B15FE /* PhosteraViewerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2ABBD6662A80754A007B15FE /* Build configuration list for PBXNativeTarget "PhosteraViewerTests" */;
+			buildPhases = (
+				2ABBD64B2A80754A007B15FE /* Sources */,
+				2ABBD64C2A80754A007B15FE /* Frameworks */,
+				2ABBD64D2A80754A007B15FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2ABBD6512A80754A007B15FE /* PBXTargetDependency */,
+			);
+			name = PhosteraViewerTests;
+			productName = PhosteraTests;
+			productReference = 2ABBD64F2A80754A007B15FE /* PhosteraViewerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2ABBD6582A80754A007B15FE /* PhosteraViewerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2ABBD6692A80754A007B15FE /* Build configuration list for PBXNativeTarget "PhosteraViewerUITests" */;
+			buildPhases = (
+				2ABBD6552A80754A007B15FE /* Sources */,
+				2ABBD6562A80754A007B15FE /* Frameworks */,
+				2ABBD6572A80754A007B15FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2ABBD65B2A80754A007B15FE /* PBXTargetDependency */,
+			);
+			name = PhosteraViewerUITests;
+			productName = PhosteraUITests;
+			productReference = 2ABBD6592A80754A007B15FE /* PhosteraViewerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2ABBD6342A807547007B15FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					2ABBD63B2A807547007B15FE = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					2ABBD64E2A80754A007B15FE = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 2ABBD63B2A807547007B15FE;
+					};
+					2ABBD6582A80754A007B15FE = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 2ABBD63B2A807547007B15FE;
+					};
+				};
+			};
+			buildConfigurationList = 2ABBD6372A807547007B15FE /* Build configuration list for PBXProject "PhosteraViewer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2ABBD6332A807547007B15FE;
+			packageReferences = (
+				2ABFE1AE2A9EAC28008FD3B6 /* XCRemoteSwiftPackageReference "HaishinKit.swift" */,
+				2ABFE1B12A9EAC36008FD3B6 /* XCRemoteSwiftPackageReference "Puppy" */,
+			);
+			productRefGroup = 2ABBD63D2A807547007B15FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2ABBD63B2A807547007B15FE /* PhosteraViewer */,
+				2ABBD64E2A80754A007B15FE /* PhosteraViewerTests */,
+				2ABBD6582A80754A007B15FE /* PhosteraViewerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2ABBD63A2A807547007B15FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ABBD64A2A80754A007B15FE /* Preview Assets.xcassets in Resources */,
+				2ABBD6462A80754A007B15FE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2ABBD64D2A80754A007B15FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2ABBD6572A80754A007B15FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2ABBD6382A807547007B15FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ABBD6422A807547007B15FE /* ContentView.swift in Sources */,
+				2ABBD6442A807547007B15FE /* Item.swift in Sources */,
+				2ABBD6402A807547007B15FE /* PhosteraApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2ABBD64B2A80754A007B15FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ABBD6542A80754A007B15FE /* PhosteraTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2ABBD6552A80754A007B15FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ABBD6602A80754A007B15FE /* PhosteraUITestsLaunchTests.swift in Sources */,
+				2ABBD65E2A80754A007B15FE /* PhosteraUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2ABBD6512A80754A007B15FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2ABBD63B2A807547007B15FE /* PhosteraViewer */;
+			targetProxy = 2ABBD6502A80754A007B15FE /* PBXContainerItemProxy */;
+		};
+		2ABBD65B2A80754A007B15FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2ABBD63B2A807547007B15FE /* PhosteraViewer */;
+			targetProxy = 2ABBD65A2A80754A007B15FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2ABBD6612A80754A007B15FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2ABBD6622A80754A007B15FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		2ABBD6642A80754A007B15FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Phostera/Phostera.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Phostera/Preview Content\"";
+				DEVELOPMENT_TEAM = XX9W769NX2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PhosteraViewer-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = PTViewer;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phostera.Phostera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3";
+			};
+			name = Debug;
+		};
+		2ABBD6652A80754A007B15FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Phostera/Phostera.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Phostera/Preview Content\"";
+				DEVELOPMENT_TEAM = XX9W769NX2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PhosteraViewer-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = PTViewer;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phostera.Phostera;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,3";
+			};
+			name = Release;
+		};
+		2ABBD6672A80754A007B15FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XX9W769NX2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phostera.PhosteraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhosteraViewer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PhosteraViewer";
+			};
+			name = Debug;
+		};
+		2ABBD6682A80754A007B15FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XX9W769NX2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phostera.PhosteraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhosteraViewer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PhosteraViewer";
+			};
+			name = Release;
+		};
+		2ABBD66A2A80754A007B15FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XX9W769NX2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phostera.PhosteraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Phostera;
+			};
+			name = Debug;
+		};
+		2ABBD66B2A80754A007B15FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XX9W769NX2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.phostera.PhosteraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Phostera;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2ABBD6372A807547007B15FE /* Build configuration list for PBXProject "PhosteraViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ABBD6612A80754A007B15FE /* Debug */,
+				2ABBD6622A80754A007B15FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2ABBD6632A80754A007B15FE /* Build configuration list for PBXNativeTarget "PhosteraViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ABBD6642A80754A007B15FE /* Debug */,
+				2ABBD6652A80754A007B15FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2ABBD6662A80754A007B15FE /* Build configuration list for PBXNativeTarget "PhosteraViewerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ABBD6672A80754A007B15FE /* Debug */,
+				2ABBD6682A80754A007B15FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2ABBD6692A80754A007B15FE /* Build configuration list for PBXNativeTarget "PhosteraViewerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ABBD66A2A80754A007B15FE /* Debug */,
+				2ABBD66B2A80754A007B15FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2ABFE1AE2A9EAC28008FD3B6 /* XCRemoteSwiftPackageReference "HaishinKit.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/shogo4405/HaishinKit.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.7;
+			};
+		};
+		2ABFE1B12A9EAC36008FD3B6 /* XCRemoteSwiftPackageReference "Puppy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sushichop/Puppy.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2ABFE1AF2A9EAC28008FD3B6 /* HaishinKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2ABFE1AE2A9EAC28008FD3B6 /* XCRemoteSwiftPackageReference "HaishinKit.swift" */;
+			productName = HaishinKit;
+		};
+		2ABFE1B22A9EAC36008FD3B6 /* Puppy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2ABFE1B12A9EAC36008FD3B6 /* XCRemoteSwiftPackageReference "Puppy" */;
+			productName = Puppy;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 2ABBD6342A807547007B15FE /* Project object */;
+}

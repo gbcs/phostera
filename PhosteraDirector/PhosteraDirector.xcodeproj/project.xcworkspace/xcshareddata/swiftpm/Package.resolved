@@ -1,0 +1,59 @@
+{
+  "pins" : [
+    {
+      "identity" : "idzswiftcommoncrypto",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/iosdevzone/IDZSwiftCommonCrypto",
+      "state" : {
+        "revision" : "47f9747d12137cd59d783ab376e3ccab7206319b",
+        "version" : "0.16.1"
+      }
+    },
+    {
+      "identity" : "puppy",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sushichop/Puppy.git",
+      "state" : {
+        "revision" : "b5af02a72a5a1f92a68e6eceee19cac804067ad9",
+        "version" : "0.7.0"
+      }
+    },
+    {
+      "identity" : "swift-bytes",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dapperstout/swift-bytes.git",
+      "state" : {
+        "revision" : "570b0b8d8694594a41bba998c5ad82eb711fa2de",
+        "version" : "0.8.0"
+      }
+    },
+    {
+      "identity" : "swift-log",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-log.git",
+      "state" : {
+        "revision" : "532d8b529501fb73a2455b179e0bbb6d49b652ed",
+        "version" : "1.5.3"
+      }
+    },
+    {
+      "identity" : "swift-securityextensions",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/svdo/swift-SecurityExtensions",
+      "state" : {
+        "revision" : "22a6b3ad4afae59e8dd33b0ccb45fa50cb1deab3",
+        "version" : "4.0.1"
+      }
+    },
+    {
+      "identity" : "swift-selfsignedcert",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/svdo/swift-SelfSignedCert.git",
+      "state" : {
+        "revision" : "a43228a07d56314c9dde4595055f4e43f6c1b7d2",
+        "version" : "3.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}

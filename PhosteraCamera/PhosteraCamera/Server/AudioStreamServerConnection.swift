@@ -1,0 +1,168 @@
+//
+//  AudioStreamServerConnection.swift
+//  PhosteraCamera
+//
+//  Created by Gary Barnett on 9/8/23.
+//
+
+import Foundation
+import Network
+import PhosteraShared
+import Combine
+
+
+class AudioStreamServerConnection: NSObject {
+    private var connection: NWConnection?
+    private var sessionKey:String = ""
+    
+    func getSessionKey() -> String {
+        return sessionKey
+    }
+
+    func stop() {
+        let s = sessionKey
+        DispatchQueue.main.async {
+            NotificationCenter.default.post(name: Notification.Name.Server.removeStreamConnection, object: nil, userInfo: ["sessionKey":s])
+        }
+        if let connection {
+            connection.cancel()
+            self.connection = nil
+        }
+    }
+    
+    private func authorizeConnection() {
+        Logger.shared.info("Audio Stream connection received it's session key from remote client. \(sessionKey)")
+        Task {
+            await AudioStreamServer.shared.moveStartupToConnections(connection:self)
+        }
+    }
+   
+    private func denyConnection() {
+        Logger.shared.info("Audio Stream connection received invalid session key from remote client. \(sessionKey)")
+        connection?.cancel()
+    }
+   
+    private func receivedMessage(content: Data?, message: NWProtocolFramer.Message) {
+        guard let content else { return }
+        Logger.shared.info("Received \(content.bytes.count) bytes from director")
+        
+        switch(message.StreamMessageType) {
+        case .auth:
+            var authRequest:StreamAuthRequest
+            let decoder = JSONDecoder()
+            do {
+                authRequest = try decoder.decode(StreamAuthRequest.self, from: content)
+                sessionKey = authRequest.sessionKey
+                Task {
+                    await CommandServer.shared.connectionWithSessionKey(sessionkey: sessionKey, completion: { [weak self] connection in
+                        guard let self else { return }
+                        if connection != nil {
+                            authorizeConnection()
+                        } else {
+                            denyConnection()
+                        }
+                    })
+                }
+            } catch {
+                Logger.shared.error("decoder error:\(error.localizedDescription)")
+                return
+            }
+            break
+        default:
+            Logger.shared.error("Unknown message in AudioStreamServerConnection")
+        }
+    }
+    
+    private func connectionFailed() {
+        Logger.shared.info("connection failed")
+    }
+    
+    private func connectionReady() {
+        Logger.shared.info("connection ready")
+    }
+ 
+    init(connection: NWConnection, server:AudioStreamServer) {
+        self.connection = connection
+        super.init()
+        startConnection()
+    }
+    
+    private func startConnection() {
+        guard let connection = connection else {
+            return
+        }
+
+        connection.stateUpdateHandler = { [weak self] newState in
+            guard let self else { return }
+            switch newState {
+            case .ready:
+                Logger.shared.info("\(connection.debugDescription) established")
+                connectionReady()
+                receiveNextMessage()
+            case .cancelled:
+                stop()
+            case .failed(let error):
+                Logger.shared.info("\(connection.debugDescription) failed with \(error.localizedDescription)")
+                stop()
+            default:
+                break
+            }
+        }
+
+        connection.start(queue: .global(qos: .userInitiated))
+    }
+    
+    func sendPreviewFrame(_ content: Data, messsageType:StreamMessageType) {
+        guard let connection = connection else {
+            return
+        }
+        
+        let message = NWProtocolFramer.Message(StreamMessageType: messsageType)
+        let context = NWConnection.ContentContext(identifier: "message", metadata: [message])
+        
+        if messsageType == .audio {
+           
+            
+        }
+        
+        //Logger.shared.info("Sending \(content.bytes.count) bytes to director \(messsageType)")
+        
+        connection.send(content: content, contentContext: context, isComplete: true, completion: .contentProcessed({ error in
+            if error != nil {
+                Logger.shared.info("Error Sending \(content.bytes.count) bytes to director: \(String(describing: error?.localizedDescription))")
+            } else {
+               //Logger.shared.info("Sent \(content.bytes.count) bytes to director: \(messsageType)")
+            }
+        }))
+    }
+    
+
+    func sendToDirector(_ content: Data, messsageType:StreamMessageType) {
+        guard let connection = connection else {
+            return
+        }
+        
+        let message = NWProtocolFramer.Message(StreamMessageType: messsageType)
+        let context = NWConnection.ContentContext(identifier: "message", metadata: [message])
+        
+        //Logger.shared.info("Sending \(content.bytes.count) bytes to director")
+        
+        connection.send(content: content, contentContext: context, isComplete: true, completion: .idempotent)
+    }
+
+    private func receiveNextMessage() {
+        guard let connection = connection else {
+            return
+        }
+
+        connection.receiveMessage { [weak self] (content, context, isComplete, error) in
+            guard let self else { return }
+            if let StreamMessage = context?.protocolMetadata(definition: StreamProtocol.definition) as? NWProtocolFramer.Message {
+                receivedMessage(content: content, message: StreamMessage)
+            }
+            if error == nil {
+                receiveNextMessage()
+            }
+        }
+    }
+}
